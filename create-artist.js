@@ -15,7 +15,7 @@ function createArtist(){
             db.query(`SELECT artist.id FROM artist`)
         })
         .then (function (index){
-            console.log("Artist created with id:" )
+            console.log("Artist created")
         })
     })
     .catch(function rejected(err) {
