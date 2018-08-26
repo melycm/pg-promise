@@ -20,6 +20,7 @@ function createTrack(){
         VALUES (Default, '${responseTrack[0]}', '${responseTrack[1]}', '${responseTrack[2]}')`)
         .then (function (result){
             console.log(responseTrack)
+            prompt.finish();
         })
     })
     .catch(function rejected(err) {
