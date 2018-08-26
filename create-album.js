@@ -1,7 +1,7 @@
 let db = require('./databse/databse.js');
 let prompt = require('prompt-promise');
 
-response = [];
+var response = [];
 
 function createAlbum(){
     prompt('Album name? ')
@@ -20,6 +20,9 @@ function createAlbum(){
         VALUES (Default, '${response[0]}', '${response[1]}', '${response[2]}')`)
         .then (function (result){
             console.log(response)
+        })
+        .then (function (index){
+            console.log("Album created")
         })
     })
     .catch(function rejected(err) {

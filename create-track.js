@@ -1,7 +1,7 @@
 let db = require('./databse/databse.js');
 let prompt = require('prompt-promise');
 
-responseTrack = [];
+var responseTrack = [];
 
 function createTrack(){
     prompt('Track name? ')
@@ -21,6 +21,9 @@ function createTrack(){
         .then (function (result){
             console.log(responseTrack)
             prompt.finish();
+        })
+        .then (function (index){
+            console.log("Track created")
         })
     })
     .catch(function rejected(err) {

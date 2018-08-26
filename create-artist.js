@@ -1,7 +1,7 @@
 let db = require('./databse/databse.js');
 let prompt = require('prompt-promise');
 
-responseArtist = [];
+var responseArtist = [];
 
 function createArtist(){
     prompt('Artist name? ')
@@ -12,7 +12,6 @@ function createArtist(){
         VALUES (Default, '${responseArtist[0]}')`)
         .then (function (result){
             console.log(responseArtist)
-            db.query(`SELECT artist.id FROM artist`)
         })
         .then (function (index){
             console.log("Artist created")
